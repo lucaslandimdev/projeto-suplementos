@@ -152,9 +152,13 @@ main div.apresentacao-produto p {
     gap: 10px;       
 }
 .card-categoria-link{
-    text-decoration: none; /* Remove sublinhado */
-    color: inherit; /* Mantém a cor original do texto */
-    display: block; /* Garante que o link ocupe toda a área */
+    text-decoration: none; 
+    color: inherit; 
+    display: block;
+    background-image: url("/assets/card1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .card {
     display: flex;
@@ -163,7 +167,7 @@ main div.apresentacao-produto p {
     width: 250px;
     height: 375px;
     padding: 20px;
-    background-image: url("assets/card1.png");
+    
 }
 
 .card-titulo {
