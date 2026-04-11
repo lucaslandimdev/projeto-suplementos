@@ -163,7 +163,7 @@ main div.apresentacao-produto p {
     width: 250px;
     height: 375px;
     padding: 20px;
-    background-image: url("/assets/card1.png");
+    background-image: url("assets/card1.png");
 }
 
 .card-titulo {
