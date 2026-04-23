@@ -22,7 +22,7 @@
     --texto-laranja: #FEB700;
     --texto-laranja-claro: #FFC965;
     --gradiente-laranja: linear-gradient(to right, #FFC965, #FEB700);
-    --gradiente-cinza: linear-gradient(to right, #ADAAAA 80%, #FEB700);
+    --gradiente-cinza: linear-gradient(to right, #392700 70%, #FEB700);
     --font-01: "Inter", sans-serif;
     --font-02: "Space Grotesk", sans-serif;
 }
@@ -46,18 +46,25 @@ nav ul {
 nav ul li a{
     color: var(--texto-cinza);
     text-decoration: none;
+    transition: 0.3s ease;
+}
+nav ul li a:hover {
+    color: var(--texto-laranja-claro);
 }
 form {
     display: flex;
     align-items: center;
     gap: 20px;
 }
+#pesquisa-produtos:hover {
+    border: 1px solid var(--fundo-06);
+}
 #pesquisa-produtos {
     background-color: var(--fundo-04);
     color: var(--texto-cinza);
     padding: 12px;
     width: 90%;
-    border: 0;
+    border: 1px solid var(--fundo-02);
     border-radius: 5px;
 }
 
@@ -66,6 +73,11 @@ nav ul.carrinho-usuario a{
     background-color: var(--fundo-04);
     padding: 10px;
     border-radius: 5px;
+    transition: 0.5s;
+}
+nav ul.carrinho-usuario a:hover{
+    color: var(--texto-laranja-claro);
+    background-color: var(--fundo-02);
 }
 main {
     background-color: var(--fundo-01);
@@ -107,6 +119,12 @@ main h1 strong.destaque-texto {
 main div.apresentacao-produto p {
     font-family: var(--font-01);
 }
+.apresentacao-btn {
+    margin-top: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+}
 .btn {
     border-radius: 5px;
     font-family: var(--font-02);
@@ -114,19 +132,21 @@ main div.apresentacao-produto p {
     text-decoration: none;
     padding: 20px 30px;
 }
-.apresentacao-btn {
-    margin-top: 50px;
-    display: flex;
-    flex-flow: row wrap;
-    gap: 10px;
-}
 .btn-compre {
     background-image: var(--gradiente-laranja);
     color: var(--texto-marrom); 
+    transition: 0.3s;
+}
+.btn-compre:hover {
+    color: var(--texto-branco);
 }
 .btn-laudos {
-    color: var(--texto-gradiente);
+    color: var(--texto-laranja);
     background-color: var(--fundo-04);
+}
+.btn-laudos:hover {
+    color: var(--texto-laranja-claro);
+    background-color: var(--fundo-02);
 }
 .btn-texto {
     background-image: var(--gradiente-laranja);
@@ -148,12 +168,12 @@ main div.apresentacao-produto p {
     background-color: var(--texto-laranja);
     margin-bottom: 40px;
 }
-.cards {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+.cards-categoria {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;          
 }
+
 .card-categoria-link{
     text-decoration: none; 
     color: inherit; 
@@ -391,5 +411,8 @@ nav ul.carrinho-usuario a{
     background-color: var(--fundo-04);
     padding: 10px;
     border-radius: 5px;
+}
+.cards-categoria {
+    grid-template-columns: 1fr;
 }
 }
