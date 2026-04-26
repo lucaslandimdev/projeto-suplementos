@@ -65,6 +65,8 @@ form {
     padding: 12px;
     width: 90%;
     border: 1px solid var(--fundo-02);
+    width: 320px;
+    border: 0;
     border-radius: 5px;
 }
 
@@ -130,8 +132,8 @@ main div.apresentacao-produto p {
     font-family: var(--font-02);
     font-weight: bold;
     text-decoration: none;
-    padding: 20px 30px;
 }
+
 .btn-compre {
     background-image: var(--gradiente-laranja);
     color: var(--texto-marrom); 
@@ -140,9 +142,19 @@ main div.apresentacao-produto p {
 .btn-compre:hover {
     color: var(--texto-branco);
 }
+.apresentacao-btn {
+    margin-top: 50px;
+}
+.btn-compre {
+    background-image: var(--gradiente-laranja);
+    color: var(--texto-marrom);
+    padding: 20px 30px;
+
+}
 .btn-laudos {
     color: var(--texto-laranja);
     background-color: var(--fundo-04);
+    padding: 20px;
 }
 .btn-laudos:hover {
     color: var(--texto-laranja-claro);
@@ -171,7 +183,13 @@ main div.apresentacao-produto p {
 .cards-categoria {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;          
+    gap: 10px; 
+}         
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;       
+
 }
 
 .card-categoria-link{
@@ -244,7 +262,7 @@ main div.apresentacao-produto p {
     margin-top: 10px;
 }
 .cards-vendidos {
-    display: flex;
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding: 10px;
     gap: 10px;
@@ -297,10 +315,10 @@ main div.apresentacao-produto p {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 40px 0;
+    margin: 0px 0;
 }
 .form-elite {
-    width: 70%;
+    width: 100%;
     padding: 12px;
     background-color: var(--fundo-03);
     border: 1px solid var(--fundo-06);
@@ -309,6 +327,7 @@ main div.apresentacao-produto p {
     font-family: var(--font-01);
 }
 .form-btn {
+    width: 100%;
     padding: 10px 25px;
     background-image: var(--gradiente-laranja);
     border: 0;
@@ -327,6 +346,7 @@ main div.apresentacao-produto p {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     padding: 40px 10px;
+    margin: auto;
 }
 .card-rodape {
     display: flex;
@@ -365,7 +385,6 @@ main div.apresentacao-produto p {
     font-family: var(--font-01);
     font-size: 12px;
     font-weight: bold;
-    
 }
 
 @media screen and (max-width: 480px){
@@ -405,7 +424,6 @@ main div.apresentacao-produto p {
     border: 0;
     border-radius: 5px;
 }
-
 nav ul.carrinho-usuario a{
     color: var(--texto-branco);
     background-color: var(--fundo-04);
@@ -414,5 +432,9 @@ nav ul.carrinho-usuario a{
 }
 .cards-categoria {
     grid-template-columns: 1fr;
+}
+.form-time-elite {
+    display: flex;
+    flex-direction: column;
 }
 }
